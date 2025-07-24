@@ -49,4 +49,17 @@ export default {
   color: #f04f47;
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
+.lista {
+  display: grid;
+  margin: 0 20px;
+  grid-template-columns: repeat(4, minmax(200px, 400px));
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 </style>

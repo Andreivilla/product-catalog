@@ -8,8 +8,15 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+
+const store = useStore();
+
+const listaProdutos = computed(() => store.state.product.listaProdutos);
 
 </script>
 
 <style>
+
 </style>
