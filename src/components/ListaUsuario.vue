@@ -61,6 +61,7 @@ export default {
 </script>
 
 <style scoped>
+/*
 h1 {
   text-align: center;
 }
@@ -72,5 +73,5 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
+}*/
 </style>

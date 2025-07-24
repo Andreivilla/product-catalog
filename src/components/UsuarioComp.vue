@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style>
+/*
 .card {
   padding: 10px;
   background: #ffedec;
@@ -77,5 +78,5 @@ export default {
 .favorito img {
   width: 30px;
   margin: 0 auto;
-}
+}*/
 </style>

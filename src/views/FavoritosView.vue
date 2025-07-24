@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style scoped>
+/*
 .favorito span {
   font-size: 25px;
   color: #f04f47;
@@ -61,5 +62,5 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
+}*/
 </style>

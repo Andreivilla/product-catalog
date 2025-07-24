@@ -1,6 +1,6 @@
 <template>
-  <ListaUsuario />
   <ListaProdutos/>
+  <ListaUsuario />
 </template>
 
 <script setup>
