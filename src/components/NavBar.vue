@@ -23,7 +23,7 @@
           <router-link to="/favoritos" class="nav-link active" aria-current="page" href="#">Favoritos</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/favoritos" class="nav-link active" aria-current="page" href="#">Carrinho</router-link>
+          <router-link to="/carrinho" class="nav-link active" aria-current="page" href="#">Carrinho</router-link>
         </li>
       </ul>
     </div>

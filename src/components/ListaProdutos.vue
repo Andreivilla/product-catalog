@@ -7,11 +7,11 @@
         :product="product"
         @rmvFavSelect="rmvFavSelect($event)"
         @addFavSelect="addFavSelect($event)"
+        @addCartSelect="addCartSelect($event)"
       />
     </div>
   </div>
   </div>
-  {{ listaFav }}
 </template>
 
 <script setup>
@@ -19,17 +19,20 @@ import { computed } from 'vue';
 import { useStore } from 'vuex';
 import ProductCard from '@/components/ProductCard.vue';
 
+//const listaCart = computed(() => store.state.product.listaCart);
 
 const store = useStore();
 
 const listaProdutos = computed(() => store.state.product.listaProdutos);
-const listaFav = computed(() => store.state.product.listaFav);
 
 function rmvFavSelect(idProduct) {
   store.dispatch('product/rmvFavProduct', idProduct);  
 }
 function addFavSelect(idProduct) {
   store.dispatch('product/addFavProduct', idProduct)
+}
+function addCartSelect(idProduct) {
+  store.dispatch('product/addCartProduct', idProduct)
 }
 
 </script>
