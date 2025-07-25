@@ -3,7 +3,7 @@
   <h2>Lista de produtos</h2>
   <div class="lista d-flex flex-wrap gap-3" >
     <div v-for="product in listaProdutos" :key="product.id">
-      <product 
+      <ProductCard 
         :product="product"
         @rmvFavSelect="rmvFavSelect($event)"
         @addFavSelect="addFavSelect($event)"
@@ -17,7 +17,7 @@
 <script setup>
 import { computed } from 'vue';
 import { useStore } from 'vuex';
-import product from '@/components/ProductCard.vue';
+import ProductCard from '@/components/ProductCard.vue';
 
 
 const store = useStore();

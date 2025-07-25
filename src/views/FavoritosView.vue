@@ -1,4 +1,39 @@
 <template>
+  <div class="container-lg">
+  <h2>Lista de favoritos</h2>
+  <div class="lista d-flex flex-wrap gap-3" >
+    <div v-for="product in listaFav" :key="product.id">
+      <ProductCard 
+        :product="product"
+        @rmvFavSelect="rmvFavSelect($event)"
+        @addFavSelect="addFavSelect($event)"
+      />
+    </div>
+  </div>
+  </div>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+import ProductCard from '@/components/ProductCard.vue';
+
+const store = useStore();
+const listaFav = computed(() => store.state.product.listaFav);
+
+function rmvFavSelect(idProduct) {
+  store.dispatch('product/rmvFavProduct', idProduct);  
+}
+function addFavSelect(idProduct) {
+  store.dispatch('product/addFavProduct', idProduct)
+}
+
+</script>
+
+<style scoped>
+</style>
+
+<!--<template>
   <h1>Lista de favoritos {{totalFavoritos}}</h1>
   <div class="lista">
     <div v-for="item in listaFavoritos" :key="item.id">
@@ -64,3 +99,4 @@ h1 {
   gap: 20px;
 }*/
 </style>
+-->
