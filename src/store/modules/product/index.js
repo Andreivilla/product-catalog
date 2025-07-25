@@ -5,7 +5,9 @@ export default {
   namespaced: true, // 👈 ESSENCIAL
   state,
   getters: {
-    // exemplo: total(state) { return ... }
+    isFav: (state) => (id) => {
+      return state.listaFav.some(x => x.id === id);
+    },
   },
   mutations: {
     ADD_FAV(state, id){

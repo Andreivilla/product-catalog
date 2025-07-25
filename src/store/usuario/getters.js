@@ -7,5 +7,5 @@ export default {
     },
     testeNome(){
         return "Nome duplicado";
-     }
+    }
 }
