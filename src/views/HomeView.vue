@@ -35,6 +35,6 @@ function addCartSelect(idProduct) {
 
 </script>
 
-<style>
+<style scoped>
 
 </style>
