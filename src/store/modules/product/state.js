@@ -1,5 +1,5 @@
 export default {
-  listaProdutos: [
+  listProduct: [
     {
       id: 0,
       name: 'Ipad',
@@ -32,6 +32,6 @@ export default {
       image: 'https://static.photos/technology/320x240/130'
     }
   ],
-  listaFav: [],
-  listaCart: []
+  listFav: [],
+  listCart: []
 }

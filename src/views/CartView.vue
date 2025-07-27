@@ -5,7 +5,7 @@
         <h2>Carrinho</h2>
         <div class="lista d-flex flex-wrap gap-3">
           <ul>
-            <li v-for="product in listaCart" :key="product.id">
+            <li v-for="product in listCart" :key="product.id">
               <ProductCardCart
                 :product="product"
                 @deleteItenCart="deleteItenCart($event)"
@@ -34,11 +34,11 @@
 
   const store = useStore();
 
-  const listaCart = computed(() => store.state.product.listaCart);
+  const listCart = computed(() => store.state.product.listCart);
 
   function totalPrice() {
     let total = 0;
-    for (const product of listaCart.value) {
+    for (const product of listCart.value) {
       //console.log(total, '+', product.price)
       
       total += Number(product.price);     
