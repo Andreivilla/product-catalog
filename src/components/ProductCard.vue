@@ -3,6 +3,7 @@
     <img :src="product.image" class="card-img-top" :alt="product.image">
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">{{ product.price }}$</p>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
       <div class=" buttons">
         <a href="#" class="btn btn-primary" @click.prevent="cartClick">Adicionar ao Carrinho</a>

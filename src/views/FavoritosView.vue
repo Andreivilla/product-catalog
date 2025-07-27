@@ -7,6 +7,7 @@
         :product="product"
         @rmvFavSelect="rmvFavSelect($event)"
         @addFavSelect="addFavSelect($event)"
+        @addCartSelect="addCartSelect($event)"
       />
     </div>
   </div>
@@ -27,6 +28,9 @@ function rmvFavSelect(idProduct) {
 }
 function addFavSelect(idProduct) {
   store.dispatch('product/addFavProduct', idProduct)
+}
+function addCartSelect(idProduct) {
+  store.dispatch('product/addCartProduct', idProduct)
 }
 
 </script>

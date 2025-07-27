@@ -15,12 +15,16 @@
         </div>
       </div>
 
-      <div class="price">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, cupiditate! Aspernatur necessitatibus autem aliquid maiores rem omnis, nemo quas dolore pariatur odit ipsum ad optio ab suscipit quasi sed ipsam?</p>
+      <div class="price-container">
+        <div class="price">
+          <h5>Preço total: {{ totalPrice() }}</h5>
+          <button type="button" class="btn btn-success" @click="finalizarClick"> 
+            Finalizar Compra
+          </button>
+        </div>
       </div>
     </div> 
   </div>
-  {{ listaCart }}
 </template>
 
 <script setup>
@@ -32,10 +36,26 @@
 
   const listaCart = computed(() => store.state.product.listaCart);
 
+  function totalPrice() {
+    let total = 0;
+    for (const product of listaCart.value) {
+      //console.log(total, '+', product.price)
+      
+      total += Number(product.price);     
+      
+      //console.log('=', total)
+    }
+    return total.toFixed(2);
+  }
+
   function deleteItenCart(idCart){
     console.log('cardview', store)
     store.dispatch("product/rmvCartProduct", idCart); // ✅ Namespace certo!
 
+  }
+
+  function finalizarClick(){
+    alert('Compra finalizada');
   }
 </script>
 
@@ -54,5 +74,21 @@ ul {
   justify-content: space-between;
   gap: 48px;
 }
+.price-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.price {
+  margin: 28px;
+}
 
+@media (max-width: 600px) {
+  .cart-content {
+    flex-direction: column;
+    justify-content: flex-start; /* opcional */
+    gap: 20px; /* menor espaçamento vertical */
+  }
+}
 </style>
