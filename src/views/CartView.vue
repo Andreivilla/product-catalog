@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div class="container-lg">
     <div class="cart-content">
       <div class="products">
@@ -91,4 +91,7 @@ ul {
     gap: 20px; /* menor espaçamento vertical */
   }
 }
-</style>
+</style>-->
+<template>
+  <div></div>
+</template>

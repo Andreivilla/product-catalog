@@ -1,16 +1,4 @@
 <template>
-  <!--<nav class="nav">
-    <ul>
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/favoritos">Favoritos</router-link></li>
-    </ul>
-    <div class="favorito">
-      <img src="@/assets/heart.svg" alt="favoritos" />
-      <span v-if="totalFavoritos > 0">{{totalFavoritos}}</span>
-    </div>
-  </nav>-->
-
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <router-link to="/" class="navbar-brand" href="#">Home</router-link>
@@ -34,16 +22,16 @@
 </template>
 
 <script>
-import { computed } from 'vue'
-import { useStore } from 'vuex'
+//import { computed } from 'vue'
+//import { useStore } from 'vuex'
 export default {
   setup() {
-    const store = useStore();
+    //const store = useStore();
 
-    const totalFavoritos = computed(() => store.getters['usuario/totalFavoritos']);
+    //const totalFavoritos = computed(() => store.getters['usuario/totalFavoritos']);
 
     return {
-      totalFavoritos
+      //totalFavoritos
     }
 
   },

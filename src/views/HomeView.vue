@@ -15,10 +15,10 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useStore } from 'vuex';
+//import { computed } from 'vue';
+//import { useStore } from 'vuex';
 import ProductCard from '@/components/ProductCard.vue';
-
+/*
 const store = useStore();
 
 const listProduct = computed(() => store.state.product.listProduct);
@@ -31,7 +31,7 @@ function addFavSelect(idProduct) {
 }
 function addCartSelect(idProduct) {
   store.dispatch('product/addCartProduct', idProduct)
-}
+}*/
 
 </script>
 

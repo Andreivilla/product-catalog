@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div class="container-lg">
   <h2>Lista de favoritos</h2>
   <div class="lista d-flex flex-wrap gap-3" >
@@ -35,4 +35,7 @@ function addCartSelect(idProduct) {
 </script>
 
 <style scoped>
-</style>
+</style>-->
+<template>
+  <div></div>
+</template>

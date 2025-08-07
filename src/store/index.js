@@ -1,4 +1,4 @@
-import { createStore } from 'vuex';
+/*import { createStore } from 'vuex';
 import product from './modules/product';
 
 
@@ -10,4 +10,4 @@ const store = createStore({
 })
 
 
-export default store;
+export default store;*/

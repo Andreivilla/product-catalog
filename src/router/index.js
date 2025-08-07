@@ -10,11 +10,8 @@ const routes = [
   {
     path: "/Favoritos",
     name: "Favoritos",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "favoritos" */ "../views/FavoritosView.vue"),
+      import("../views/FavoritosView.vue"),
   },
   {
     path: "/Carrinho",
@@ -25,7 +22,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/product-catalog/'),
   routes,
 });
 

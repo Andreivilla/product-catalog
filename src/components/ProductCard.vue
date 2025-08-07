@@ -22,10 +22,10 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, computed } from "vue";
-import { useStore } from 'vuex';
+import { defineProps, defineEmits} from "vue";
+//import { useStore } from 'vuex';
 
-const store = useStore();
+//const store = useStore();
 const emit = defineEmits([ 
   "addCartSelect", 
   "addFavSelect", 
@@ -36,14 +36,14 @@ const props = defineProps({
   product: Object,
 });
 
-const isFavorito = computed(() => store.getters["product/isFav"](props.product.id));
+//const isFavorito = computed(() => store.getters["product/isFav"](props.product.id));
 
 function favClick() {
-  if (isFavorito.value) {
+  /*if (isFavorito.value) {
     emit("rmvFavSelect", props.product.id);
   } else {
     emit("addFavSelect", props.product.id); 
-  }
+  }*/
 }
 
 function cartClick(){
