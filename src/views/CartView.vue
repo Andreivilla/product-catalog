@@ -1,4 +1,4 @@
-<!--<template>
+<template>
   <div class="container-lg">
     <div class="cart-content">
       <div class="products">
@@ -28,30 +28,24 @@
 </template>
 
 <script setup>
-  import { useStore } from 'vuex';
   import { computed } from 'vue';
   import ProductCardCart from '@/components/ProductCardCart.vue';
+  import { useProductStore } from '@/stores/product';
+  
+  const productStore = useProductStore();
 
-  const store = useStore();
-
-  const listCart = computed(() => store.state.product.listCart);
+  const listCart = computed(() => productStore.listCart);
 
   function totalPrice() {
     let total = 0;
-    for (const product of listCart.value) {
-      //console.log(total, '+', product.price)
-      
+    for (const product of listCart.value) {      
       total += Number(product.price);     
-      
-      //console.log('=', total)
     }
     return total.toFixed(2);
   }
 
   function deleteItenCart(idCart){
-    console.log('cardview', store)
-    store.dispatch("product/rmvCartProduct", idCart); // ✅ Namespace certo!
-
+    productStore.removeCart(idCart);
   }
 
   function finalizarClick(){
@@ -91,7 +85,4 @@ ul {
     gap: 20px; /* menor espaçamento vertical */
   }
 }
-</style>-->
-<template>
-  <div></div>
-</template>
+</style>

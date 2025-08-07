@@ -21,21 +21,15 @@
 
 </template>
 
-<script>
+<script setup>
 //import { computed } from 'vue'
 //import { useStore } from 'vuex'
-export default {
-  setup() {
-    //const store = useStore();
 
-    //const totalFavoritos = computed(() => store.getters['usuario/totalFavoritos']);
+//const store = useStore();
 
-    return {
-      //totalFavoritos
-    }
+//const totalFavoritos = computed(() => store.getters['usuario/totalFavoritos']);
 
-  },
-};
+
 </script>
 
 <style scoped>

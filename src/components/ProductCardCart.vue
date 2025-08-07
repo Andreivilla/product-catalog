@@ -29,8 +29,7 @@ const props = defineProps({
 })
 
 function deleteIten(){
-  console.log('cartviewcomponent')
-  emit("deleteItenCart", props.product.cardId);
+  emit("deleteItenCart", props.product.cartId);
 }
 
 </script>

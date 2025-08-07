@@ -23,6 +23,10 @@
 
 <script setup>
 import { defineProps, defineEmits} from "vue";
+import { useProductStore } from "@/stores/product";
+//import ProductCard from '@/components/ProductCard.vue';
+
+const productStore = useProductStore()
 //import { useStore } from 'vuex';
 
 //const store = useStore();
@@ -36,14 +40,17 @@ const props = defineProps({
   product: Object,
 });
 
-//const isFavorito = computed(() => store.getters["product/isFav"](props.product.id));
+import { computed } from 'vue'
+
+const isFavorito = computed(() => productStore.isFav(props.product.id))
+
 
 function favClick() {
-  /*if (isFavorito.value) {
+  if (isFavorito.value) {
     emit("rmvFavSelect", props.product.id);
   } else {
     emit("addFavSelect", props.product.id); 
-  }*/
+  }
 }
 
 function cartClick(){

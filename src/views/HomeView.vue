@@ -15,23 +15,25 @@
 </template>
 
 <script setup>
-//import { computed } from 'vue';
-//import { useStore } from 'vuex';
+import { useProductStore } from '@/stores/product';
 import ProductCard from '@/components/ProductCard.vue';
-/*
-const store = useStore();
 
-const listProduct = computed(() => store.state.product.listProduct);
+const productStore = useProductStore()
+
+const listProduct = productStore.listProduct;
 
 function rmvFavSelect(idProduct) {
-  store.dispatch('product/rmvFavProduct', idProduct);  
+  productStore.removeFav(idProduct);
 }
+
 function addFavSelect(idProduct) {
-  store.dispatch('product/addFavProduct', idProduct)
+  productStore.addFav(idProduct);
 }
+
 function addCartSelect(idProduct) {
-  store.dispatch('product/addCartProduct', idProduct)
-}*/
+  productStore.addCart(idProduct);
+}
+
 
 </script>
 
